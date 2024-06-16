@@ -10,7 +10,7 @@ public class CarrinhoCompras {
     public CarrinhoCompras() {
         this.itemList = new ArrayList<>();
     }
-
+    //METODO PARA ADICIONAR LISTA
     public void adicionarItem(String nome, double preco, int quantidade) {
         itemList.add(new Item(nome, preco, quantidade));
     }
