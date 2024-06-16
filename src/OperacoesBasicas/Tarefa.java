@@ -1,7 +1,7 @@
 package OperacoesBasicas;
 
 public class Tarefa {
-    //attibuto
+    //atributo
 
     private String descricao;
 
