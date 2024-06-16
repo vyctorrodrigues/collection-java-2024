@@ -33,7 +33,7 @@ public class CatalogoLivros {
     }
 
     public List<Livros> pesquisarPorIntervaloAnos(int anoInicial, int anoFinal) {
-        List<Livros> livrosPorIntervaloAnos = new ArrayList<>(null);
+        List<Livros> livrosPorIntervaloAnos = new ArrayList<>();
         if (!livrosList.isEmpty()) {
             for (Livros livros : livrosList) {
                 if (livros.getAnoPublicacao() >= anoInicial && livros.getAnoPublicacao() <= anoFinal) {
@@ -63,6 +63,18 @@ public class CatalogoLivros {
     }
     
     public static void main(String[] args) {
+        CatalogoLivros catalogoLivros = new CatalogoLivros();
+        //a ordem que eu for adicionando os elementos é a ordem da lista que vai imprimir no console
+        catalogoLivros.adicionarLivro("titulo1", "autor1", 2010);
+        catalogoLivros.adicionarLivro("titulo1", "autor2", 2010);
+        catalogoLivros.adicionarLivro("titulo2", "autor2", 2014);
+        catalogoLivros.adicionarLivro("titulo3", "autor3", 2014);
+        catalogoLivros.adicionarLivro("titulo4", "autor4", 2020);
+        catalogoLivros.adicionarLivro("titulo5", "autor5", 2024);
+
         
+        System.out.println(catalogoLivros.pesquisarPorTitulo("titulo1"));
+        System.out.println(catalogoLivros.pesquisarPorAutor("autor1"));
+        System.out.println(catalogoLivros.pesquisarPorIntervaloAnos(2010, 2024));
     }
 }
