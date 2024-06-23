@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.ArrayList;
 import java.util.Collections;
 public class OrdenacaoNumeros {
-    private List <Integer> numerosList;
+  private List <Integer> numerosList;
 
     public OrdenacaoNumeros() {
         this.numerosList = new ArrayList<>();
@@ -24,7 +24,7 @@ public class OrdenacaoNumeros {
         }
     }
     
-      public List<Integer> ordenarDescendente() {
+    public List<Integer> ordenarDescendente() {
         List<Integer> numerosAscendente = new ArrayList<>(this.numerosList);
         if (!numerosList.isEmpty()) {
           numerosAscendente.sort(Collections.reverseOrder());
@@ -32,7 +32,7 @@ public class OrdenacaoNumeros {
         } else {
           throw new RuntimeException("A lista está vazia!");
         }
-      }
+    }
 
     public void exibirNumeros() {
         if (!numerosList.isEmpty()) {
@@ -40,7 +40,7 @@ public class OrdenacaoNumeros {
         } else {
           System.out.println("A lista está vazia!");
         }
-      }
+    }
     
       public static void main(String[] args) {
         // Criando uma instância da classe OrdenacaoNumeros
